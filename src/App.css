@@ -1,38 +1,48 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --dark-element: hsl(209, 23%, 22%);
+  --dark-bg: hsl(207, 26%, 17%);
+  --light-text: hsl(200, 15%, 8%);
+  --light-input: hsl(0, 0%, 52%);
+  --light-bg: hsl(0, 0%, 98%);
+  --d-text-l-elements: hsl(0, 0%, 100%);
+  --br: 4px;
+  --as: 300ms;
+}
+.light-theme {
+  --bg: var(--light-bg);
+  --text: var(--light-text);
+  --input: var(--light-input);
+  --element: var(--d-text-l-elements);
+  --spinner: var(--dark-element);
+}
+.dark-theme {
+  --bg: var(--dark-bg);
+  --text: var(--d-text-l-elements);
+  --input: var(--dark-element);
+  --element: var(--dark-element);
+  --spinner: var(--d-text-l-elements);
+}
+
+html,
+body,
+#root,
 .App {
-  text-align: center;
+  height: 100%;
+  width: 100%;
+  font-family: "Nunito Sans", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: var(--bg);
+  transition: background-color var(--as);
+  color: var(--text);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App {
+  display: grid;
+  grid-template-rows: 60px auto;
 }

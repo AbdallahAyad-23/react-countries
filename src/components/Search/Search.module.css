@@ -1,0 +1,45 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.search {
+  width: 100%;
+  border-radius: var(--br);
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  background-color: var(--element);
+  transition: background-color var(--as);
+  padding-inline: 20px;
+}
+.icon {
+  color: var(--text);
+}
+.input {
+  width: 90%;
+  color: var(--text);
+  padding: 10px;
+  background: var(--element);
+  transition: background-color var(--as);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  outline: none;
+}
+.input::placeholder {
+  color: var(--text);
+}
+
+@media (min-width: 768px) {
+  .search {
+    width: 50%;
+  }
+  .container {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+}

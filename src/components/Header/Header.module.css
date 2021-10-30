@@ -1,0 +1,41 @@
+.header {
+  grid-column: 1/2;
+  background-color: var(--element);
+  transition: background-color var(--as);
+  width: 100%;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 10px;
+  z-index: 1;
+}
+.header__title {
+  font-size: 1rem;
+}
+.header__mode {
+  color: var(--text);
+  border: none;
+  outline: none;
+  background: none;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+.mode {
+  fill: var(--text);
+}
+
+@media (min-width: 768px) {
+  .header__title {
+    font-size: 1.3rem;
+  }
+  .header__mode {
+    font-size: 1.1rem;
+  }
+}
